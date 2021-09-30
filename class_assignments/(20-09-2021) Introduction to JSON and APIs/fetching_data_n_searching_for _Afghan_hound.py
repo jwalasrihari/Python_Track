@@ -1,3 +1,11 @@
+#PROGRAM       : Read data from API and display the "Afghan Hound" dog details
+#PROGRAMMED BY : Badam Jwala Sri Hari
+#MAIL ID       : jwalasrihari1330@gmail.com
+#DATE          : 20-09-2021
+#PYTHON VERSION: 3.9.7
+#CAVEATS       : None
+#LICENSE       : None
+
 
 import requests
 import json 
@@ -21,9 +29,11 @@ url = "https://api.thedogapi.com/v1/breeds"
 
 
 s = jwala_url()
+
 #checking whether URL is exists or not
 if s.check_url(url)==True:
     dic=s.read_url(url)
+    
     #iterating over list of dictionaries
     for i in dic:
         #getting details of Afghan Hound

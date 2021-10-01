@@ -1,28 +1,29 @@
-'''program :Create a RESTFul API server in Python Flask. To achieve your target
-kindly go through the following process:-
+''' PROGRAM :Create a RESTFul API server in Python Flask. To achieve your target
+            kindly go through the following process:-
 
-1) You have to hit the URL https://api.thedogapi.com/v1/breeds into a
-local JSON file into your localhost.
+                1) You have to hit the URL https://api.thedogapi.com/v1/breeds into a
+                local JSON file into your localhost.
 
-2) From the JSON file scrap the data of the breed of dog, country of
-origin, bred for which purpose and the image of the dog.
+                2) From the JSON file scrap the data of the breed of dog, country of
+                origin, bred for which purpose and the image of the dog.
 
-3) Display the data in a tabular format into a HTML page.
+                3) Display the data in a tabular format into a HTML page.
 
-4) Send the extracted data into a MongoDB database with basic CRUD
-operations associated with it'''
+                4) Send the extracted data into a MongoDB database with basic CRUD
+                operations associated with it
+ '''
 
 
 #PROGRAMMED BY : Badam Jwala Sri Hari
 #MAIL ID       : jwalasrihari1330@gmail.com
 #DATE          : 28-09-2021
-#PYTHON VERSION: 3.9
+#PYTHON VERSION: 3.9.7
+#FLASK VERSION : 2.0.1
 #CAVEATS       : None
 #LICENSE       : None
 
 from flask import Flask
 from flask import render_template
-
 from flask import request
 
 
@@ -33,10 +34,7 @@ from pymongo import MongoClient
 import requests
 import json
 
-'''
-import pandas as pd
-from shutil import copy
-'''
+
 
 # PYTHON REQUESTS & API
 def create_json(data,file):
@@ -59,7 +57,7 @@ def read_url(url):
     return url.json()
 
 
-#mongo
+# Mongo
 connection = MongoClient("mongodb://localhost:27017")
 
 def mongo_connection():
@@ -87,7 +85,7 @@ def create_new_collection(db_name, new_collection):
         return("error")
 
 
-#Inserting data into mongodb
+# Inserting data into mongodb
 def insert_data(db_name,collection_name,data):
     if connection:
         connection[db_name][collection_name].insert_one(data)
@@ -107,17 +105,17 @@ def display(db_name,collection_name):
 
 
 
-#data is extracted from these URL
+# Data is extracted from these URL
 url = "https://api.thedogapi.com/v1/breeds"
 
 
-#temp and headings will be used in result.html
+# temp and headings will be used in result.html
 temp=[] # temp is to store the list of all extracted elements
 headings=["Image","Name","Bred_for","Country"]
 
 
 
-#checking whether URL is exists or not
+# Checking whether URL is exists or not
 if check_url(url)==True:
 
     # Reading data from url and  storing into json
@@ -126,7 +124,7 @@ if check_url(url)==True:
     create_json(d,file)
 
     dic=read_json("dog_breed.json")
-    #extracting the name,origin(country), bred_for,image
+    # Extracting the name,origin(country), bred_for,image
     for i in dic:
         one={'name':i['name']}
 
@@ -147,22 +145,16 @@ if check_url(url)==True:
 
 
 
-        #inserting data into mongodb
+        # Inserting data into mongodb
         insert_data("mongo_python","dog_breed",one)
-
-    '''
-    df = pd.DataFrame(temp)
-
-    #converting temp(dictionary) to html
-    df.to_html('result.html')
-
-    #copying result file from present directory to static
-    copy("result.html","./templates/result.html")
-    '''
+        
+        
 
 app = Flask(__name__)
 @app.route('/')
 def index():
+    # Heading and temp are kept as an arguments render template
+    # So,that we can use them in result.html file to display
     return render_template('result.html',headings=headings,temp=temp)
 
 app.run(debug=True, port=5000)

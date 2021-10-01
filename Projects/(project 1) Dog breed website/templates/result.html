@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/dog_breed.css"/>
+    </head>
+<body>
+    <div>
+        <table>
+            <tr>
+                {% for i in headings %}
+                <th> {{i}}</th>
+                {% endfor %}
+
+            </tr>
+            {% for j in temp %}
+            <tr>
+                {% set image=j[0] %}
+                {% set details=j[1] %}
+                <td> <img src="{{image}}"></td>
+                {% for data in details%}
+                        <td> {{data}}</td>
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

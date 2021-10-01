@@ -39,7 +39,7 @@ import json
 # PYTHON REQUESTS & API
 def create_json(data,file):
     with open(file, "w") as file:
-        return json.dump(data, file)
+        return json.dump(data, file,indent=4)
 
 def read_json(file):
     with open(file)as file:

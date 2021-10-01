@@ -3,7 +3,7 @@ import json
 from flask import jsonify
 def create_json(data):
     with open("fact_karprekar.json", "w") as file:
-        return json.dump(data, file)
+        return json.dump(data, file,indent=4)
 
 
 #factorial

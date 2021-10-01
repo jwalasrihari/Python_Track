@@ -1,6 +1,7 @@
-#PROGRAM DESCRIPITON: Take a 4 digit number non-repeating number and arrange it in ascending and descending order to get two new numbers.
-#                     Then subtract the highest number from lower number till you get the number 6147.
-#                     If the end result is 6147 then return TRUE else FALSE.
+'''PROGRAM DESCRIPITON: Take a 4 digit number non-repeating number and arrange it in ascending and descending order to get two new numbers.
+                        Then subtract the highest number from lower number till you get the number 6147.
+                        If the end result is 6147 then return TRUE else FALSE.
+'''
 
 
 # PROGRAMMED BY: B Jwala Sri Hari

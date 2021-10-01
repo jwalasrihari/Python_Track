@@ -1,3 +1,13 @@
+#PROGRAM       : Find Factorial, Karprekar numbers in a range and store them in JSON
+#PROGRAMMED BY : Badam Jwala Sri Hari
+#MAIL ID       : jwalasrihari1330@gmail.com
+#DATE          : 28-09-2021
+#PYTHON VERSION: 3.9.7
+#CAVEATS       : None
+#LICENSE       : None
+
+
+
 import numpy as np
 import json
 from flask import jsonify
@@ -13,6 +23,7 @@ for i in range(1,10):
 
 fact=list(map(str,fact))
 print(fact)
+
 #karperkar
 lst=np.arange(1,10000)
 kar=['1']

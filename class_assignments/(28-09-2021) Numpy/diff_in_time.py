@@ -1,3 +1,11 @@
+#PROGRAM       : Difference between time of execution from list and numpy array
+#PROGRAMMED BY : Badam Jwala Sri Hari
+#MAIL ID       : jwalasrihari1330@gmail.com
+#DATE          : 28-09-2021
+#PYTHON VERSION: 3.9.7
+#CAVEATS       : None
+#LICENSE       : None
+
 import numpy as np
 import sys
 import time

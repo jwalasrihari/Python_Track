@@ -1,7 +1,18 @@
+#PROGRAM       : Statistics
+#PROGRAMMED BY : Badam Jwala Sri Hari
+#MAIL ID       : jwalasrihari1330@gmail.com
+#DATE          : 30-09-2021
+#PYTHON VERSION: 3.9.7
+#CAVEATS       : None
+#LICENSE       : None
+
+
 import numpy as np
 
 class stat:
     sum=0
+    
+    # Mean of data when frequency is given 
     def dsmean(self, data, frequency):
             res_list=[]
             data=np.array(data,dtype=int)
@@ -16,7 +27,8 @@ class stat:
                     return("Error 1")
             else:
                 return("error 2")
-# median of the dataset
+            
+    # Median of the dataset
     def median(self, data):
         data.sort()
         #even number data
@@ -30,7 +42,7 @@ class stat:
         else:
             return("error")
 
-# mode method in statistics(can be implemented on non numerical enities also)
+    # Mode method in statistics(can be implemented on non numerical enities also)
     def mode(self, data):
         count = 0
         num = data[0]
@@ -40,6 +52,7 @@ class stat:
                 count = mode
                 num = i
         return (num)
+    
     def geometric_mean(self,data):
         prod=1
         for i in data:

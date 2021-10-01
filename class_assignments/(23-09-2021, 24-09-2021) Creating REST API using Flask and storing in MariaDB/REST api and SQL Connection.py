@@ -32,20 +32,28 @@ class APIUserModel(db.Model):
     name = db.Column(db.String(20))
     email = db.Column(db.String(20))
 
-# insert data into mysql server
+# insert data into SQL
 @app.route('/write', methods = ['POST'])
 def write():
+	
+    # Requesting name and email from POSTMAN i.e.,frontend
     name = request.get_json()["name"]
     email = request.get_json()["email"]
     api_user_model = APIUserModel(name = name, email = email)
     save_to_database = db.session()
     try:
         save_to_database.add(api_user_model)
+	
+	# After data is added successfully we have to commit the DB to save 
         save_to_database.commit()
     except:
+	
+	# If insertion was not done properly we have to rollback and go the previous stage where DB is consistency(last savepoint or commit)
         save_to_database.rollback()
+	# Flush is used to free memory
         save_to_database.flush()
-
+	
+    # Returning the jsonify object as response to confirm data is inserted
     return jsonify({"message":"success"})
 
 
@@ -70,6 +78,7 @@ def fetch_by_id(id):
 #update data
 @app.route('/update/<int:id>', methods=['PATCH'])
 def update(id):
+	
     # update = insert + fetch by id
     name = request.get_json()["name"]
     email = request.get_json()["email"]
@@ -77,6 +86,7 @@ def update(id):
     try:
         api_user_model = APIUserModel.query.filter_by(id=id).first()
         data=APIUserModel.query.filter_by(id=id).first()
+	
         #data which has to deleted is stored in temp1 variable
         temp1= {"id":data.id, "name":data.name, "email":data.email}
 
@@ -84,6 +94,7 @@ def update(id):
         api_user_model.email = email
 
         data=APIUserModel.query.filter_by(id=id).first()
+	
         #data which have been updated is stored in temp variable
         temp= {"id":data.id, "name":data.name, "email":data.email}
         save_to_database.commit()
@@ -102,6 +113,7 @@ def delete(id):
     try:
         save_to_database = db.session
         data=APIUserModel.query.filter_by(id=id).first()
+	
         #data which have been deleted is stored in temp variable
         temp= jsonify({"id":data.id, "name":data.name, "email":data.email})
         APIUserModel.query.filter_by(id=id).delete()

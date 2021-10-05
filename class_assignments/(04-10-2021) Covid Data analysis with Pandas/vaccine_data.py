@@ -1,3 +1,18 @@
+'''
+PROGRAM DESCRIPITON:
+	Find out the total vaccinations administered in India and USA from the given CSV file.
+    Also find out what is the % rate of US as compared to INdia in vaccine adminstration?
+    Consider the total vbaccines adminstred 
+'''
+
+# PROGRAMMED BY: BADAM JWALA SRI HARI
+# MAIL ID      : jwalasrihari1330@gmail.com
+# DATE         : 04-10-2021
+# PYTHON VERSION: 3.9.7
+# PANDAS VERSION: 1.3.3
+# CAVEATS      : None
+# LICENSE      : None
+
 import pandas as pd
 import numpy as np
 from statistics import mode

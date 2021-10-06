@@ -64,10 +64,7 @@ class sudoku:
                             self.solve()
                             # If we are strucked a some point we will backtrack and place Zero
                             self.grid[row][column] = 0
-
                     return
-
-
         print(np.matrix(self.grid))
 obj=sudoku()
 obj.solve()

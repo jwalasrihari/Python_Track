@@ -71,7 +71,6 @@ obj.solve()
 
 
 
-
 '''
 output:
 

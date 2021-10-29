@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Images</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href='./static/images.css'>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/#">Life Expectancy</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Abstract</a></li>
+            <li><a href="/about_data">About Data</a></li>
+            <li class="active"><a href="/data_pre-processing">Data Pre-processing</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Analysis<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/anv">General Analysis</a></li>
+                <li><a href="/regression_a">Regression Analysis</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+<h2>Data Pre-processing</h2>
+
+<div class='container2'>
+    <div   class="center_text" >
+        <p class="heading">Handling the Missing value: </p>
+        <p>
+             Data sets consists of 2938 rows and 22 columns with 193 countries data with the missing value which should be handled.
+             Missing value can be replaced with Mean, Mode, Median based on the Column. Here in all features missing values are replaced with the mean of that column.
+        </p>
+    </div>
+  <div class="left_image">
+    <img class="text_img" src="./static/missing_values.png">
+    <img class="text_img" src="./static/after_missing.png">
+  </div>
+
+</div>
+
+
+
+
+
+<div class='container2'>
+    <div class="center_text" >
+        <p class="heading">Detection and removal of Outliers:</p>
+        <p>
+          Outliers are unusual values in your dataset, and they can distort statistical analyses and violate their assumptions.
+          Outliers increase the variability in your data, which decreases statistical power.
+          Consequently, excluding outliers can cause your results to become statistically significant.
+          Outliers can be identified by using Boxplots
+      </p>
+      </div>
+    <h3>Before removing Outliers</h3>
+    <img class="boxplot" src="./static/box_plot_before_outlier_remove1.png"  >
+    <h3>After removing Outliers</h3>
+    <img class="boxplot" src="./static/box_plot_after_outlier_remove1.png"  >
+  </div>
+
+</body>
+</html>

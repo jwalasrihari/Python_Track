@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Abstract</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="active.js"></script>
+</head>
+<style>
+h2,h3{
+margin:20px;
+}
+h4
+{
+  margin:15px 30px;
+}
+p{
+margin:20px;
+text-align: justify;
+font-size:20px;
+}
+ul.a
+{
+margin:20px;
+text-align: justify;
+font-size:20px;
+}
+
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/#">Life Expectancy</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Abstract</a></li>
+      <li><a href="/about_data">About Data</a></li>
+      <li><a href="/data_pre-processing">Data Pre-processing</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Analysis<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/anv">General Analysis</a></li>
+          <li><a href="/regression_a">Regression Analysis</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/conclusion">Conclusion</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h2>Abstract: </h2>
+<p>
+
+  In the past two decades Life Expectancy is increased by 6 years which was influenced by a range of factors like Immunization factors, Mortality factors, Economic factors, social factors.
+  Analysis on factors which are influencing Life span of people is essential because from past data it will be clear which factors influencing in increases life span and which factors are influencing reduce in Life Expectancy.
+
+</p>
+
+<h2>Data collection:</h2>
+<p>
+  Life Expectancy WHO is taken from Kaggle and helps in predicting life expectancy with the help of numerous factors for a period of 15 years.
+  The Global Health Observatory (GHO) data repository under World Health Organization (WHO) keeps track of the health status as well as many other related factors for all countries The data sets are made available to the public for the purpose of health data analysis.
+  The data-set related to life expectancy, health factors for 193 countries have been collected from the same WHO data repository website and its corresponding economic data was collected from the United Nation website.
+  Although there have been a lot of studies undertaken in the past on factors affecting life expectancy considering demographic variables, income composition, and mortality rates.
+  It was found that the effect of immunization and the human development index were not considered in the past.
+  This dataset is to be used for Machine Learning and Data Visualization purposes.
+
+</p>
+
+<h2>Approach:</h2>
+<ul class='a'>
+  <li>The various python libraries such as Numpy, pandas, Matplotlib are used for the purpose of mathematical calculations, extraction of data and visualization, respectively.  </li>
+  <li>Some other packages are used like sklearn which helps to find relationship between factors.</li>
+  <li>The extracted dataset was found to have null values which are then effectively handled to achieve accurate analysis rather than removing them from the dataset. </li>
+</ul>
+
+</body>
+</html>
+
+
+
+

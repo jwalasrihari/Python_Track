@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Images</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href='./static/images.css'>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/#">Life Expectancy</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Abstract</a></li>
+            <li><a href="/about_data">About Data</a></li>
+            <li ><a href="/data_pre-processing">Data Pre-processing</a></li>
+            <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Analysis<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/anv">General Analysis</a></li>
+                <li><a href="/regression_a">Regression Analysis</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <div class='container2'>
+        <div class="left_image">
+          <img src="./static/Schooling VsLife_expectancy.png">
+        </div>
+        <div   class="right_text" >
+          <p class="heading">Relationship between Life expectancy and Schooling:</p>
+          <p>
+            Points are scattered on the graph as the number of points is more curve can't be fitted.
+             The Line can be fitted. So, the Linear Regression technique can be to analyse the relationship between Life expectancy and Schooling.
+             Taking Independent variable as Schooling and dependent as Life expectancy.
+             As a result, the slope is 1.544 and Bias is 105.17. So, the Regression line is y= 1.544 X + 105.17.
+             The increase in value of Schooling with respect to Life expectancy is times 1.544 with the change of 105.17.
+          </p>
+          </br>
+          <p class="small_heading">Inference:</p>
+          <p>Positive correlation is existing between schooling and Life expectancy as the value of schooling increases the life expectancy is increasing. </p>
+        </div>
+      </div>
+
+
+
+      <div class='container2'>
+
+        <div   class="left_text" >
+          <p class="heading">Relationship between Life expectancy and Adult Mortality: </p>
+          <p>
+            Points are scattered on the graph as the number of points is more curve can't be fitted.
+            The Line can be fitted. So, the Linear Regression technique can be to analyse the relationship between Life expectancy and Adult Mortality.
+             Taking Independent variable as Adult Mortality and dependent as Life expectancy.
+             As a result, the slope is –0.538 and Bias is 321.94. So, the Regression line is y= -0.538 X + 321.94.
+              The negative value of slope indicates that the right-side angle of the line with the x-axis is more than 90 degrees.
+               The increase in value of Adult Mortality with respect to Life expectancy is times –0.538 with the change of 321.94.  </p>
+          </br>
+          <p class="small_heading">Inference:</p>
+          <p> Negative correlation is existing between Adult Mortality and Life expectancy as the value of Adult Mortality increases the life expectancy is decreases. </p>
+        </div>
+          <div class="right_image">
+            <img src="./static/Adult_Mortality VsLife_expectancy.png"  >
+          </div>
+      </div>
+
+
+
+
+        <div class='container2'>
+          <div class="left_image">
+            <img src="./static/Income_composition_of_resources VsLife_expectancy.png"  >
+          </div>
+
+          <div class="right_text" >
+            <p class="heading">Relationship between Life expectancy and Income composition of resources: </p>
+            <p>
+                Points are scattered on the graph as the number of points is more curve can't be fitted. The Line can be fitted. So, the Linear Regression technique can be to analyse the relationship between Life expectancy and Income composition of resources. Taking Independent variable as Income composition of resources and dependent as Life expectancy. As a result, the slope is 0.291 and Bias is 150.9. So, the Regression line is y= 0.291 X + 150.9. The increase in value of Income composition of resources with respect to Life expectancy is times 0.291 with the change of 150.9. </p>
+            </br>
+            <p class="small_heading">Inference:</p>
+            <p>
+                Positive correlation is existing between the Income composition of resources and Life expectancy as the value of Income composition of resources increases the life expectancy is increasing.
+            </p>
+          </div>
+        </div>
+
+        <div class='container2'>
+          <div   class="left_text" >
+            <p class="heading">Relationship between Life expectancy and Schooling:</p>
+            <p>
+                Points are scattered on the graph as the number of points is more curve can't be fitted.
+                 The Line can be fitted. So, the Linear Regression technique can be to analyse the relationship between Life expectancy and Population.
+                 Taking Independent variable as Population and dependent as Life expectancy. As a result, the slope is 0.0048 and Bias is 260.56.
+                 So, the Regression line is y= 0.0048 X + 260.56.
+                  The increase in value of Population with respect to Life expectancy is times 0.0048 with the change of 260.56.
+            </p>
+            </br>
+            <p class="small_heading">Inference:</p>
+            <p>As the slope value is near to zero means Regression line is almost parallel to x – axis which indicates no correlation is exists between Population and Life expectancy as the value of Population increases the life expectancy is increasing. </p>
+          </div>
+            <div class="right_image">
+              <img src="./static/Population VsLife_expectancy.png"  >
+            </div>
+        </div>
+
+</body>
+</html>

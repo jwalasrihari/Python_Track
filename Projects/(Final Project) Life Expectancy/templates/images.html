@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Images</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href='./static/images.css'>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/#">COVID cases Analysis</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="/">Abstract</a></li>
+        <li  class="active"><a href="/images">Conclusions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class='container2'>
+    <div class="left_image">
+        <img src="./static/poly_Daily Confirmed VsDaily Deceased.png">
+    </div>
+    <div   class="right_text" >
+      <p class="heading">Relationship between Daily Confirmed and Daily Deceased: </p>
+      <p>
+        After scattering points on the graph, it will be clear that the Polynomial regression technique should be applied to find the relationship between the Daily Confirmed and Daily Deceased.
+        The r2 score obtained is 0.86035 which is almost close to 1 that implies that Daily Deceased cases is depending on Daily Confirmed.
+      </p>
+      </br>
+      <p class="small_heading">Inference:</p>
+      <p>As the R2 score value is greater than 0.3 Daily Deceased cases are depending on Daily Confirmed cases</p>
+    </div>
+  </div>
+
+
+  <div class='container2'>
+    <div   class="left_text" >
+      <p class="heading">Relationship between Daily Confirmed and Daily Recovered cases:</p>
+      <p>
+        After scattering points on the graph, it will be clear that the Polynomial regression technique should be applied to find the relationship between the number of deaths caused due to iron deficiency and Alcohol use.
+        The r2 score obtained is 0.7377 which is almost close to 1 which implies that Daily Recovered depends on Daily Confirmed.
+      </p>
+      </br>
+      <p class="small_heading">Inference:</p>
+      <p> Daily Recovered depending on Daily Confirmed cases</p>
+    </div>
+      <div class="right_image">
+        <img src="./static/poly_Daily Confirmed VsDaily Recovered.png">
+      </div>
+  </div>
+
+  <div class='container2'>
+    <div class="left_image">
+        <img src="./static/poly_Daily Recovered VsDaily Deceased.png">
+    </div>
+    <div   class="right_text" >
+      <p class="heading">Relationship between Daily Recovered and Daily Deceased: </p>
+      <p>
+        After scattering points on the graph, it will be clear that the Polynomial regression technique should be applied to find the relationship between the Daily Recovered and Daily Deceased.
+        The r2 score obtained is 0.88288 which is almost close to 1 that implies that Daily Deceased cases is depending on Daily Recovered.
+      </p>
+      </br>
+      <p class="small_heading">Inference:</p>
+      <p>As the R2 score value is greater than 0.3 Daily Deceased cases are depending on Daily Recovered cases</p>
+    </div>
+  </div>
+</body>
+</html>

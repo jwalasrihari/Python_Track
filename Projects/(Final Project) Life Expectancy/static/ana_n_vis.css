@@ -1,0 +1,111 @@
+  img{
+	  width:500px;
+	  height:350px;
+    margin:20px;
+  }
+
+  h2
+  {
+  margin:20px;
+  }
+  .heading
+  {
+    font-size:22px;
+    font-weight: bold;
+    font-style: oblique;
+    margin:15px
+  }
+  p.small_heading
+  {
+    font-size:22px;
+    font-weight: bold;
+    font-style: oblique;
+  }
+  h3
+  {
+    margin:15px 30px;
+  }
+  h4
+  {
+    margin:0
+  }
+  .left_image
+  {
+    float:left;
+    width:600px;
+  }
+  .text_img
+  {
+    width:350px;
+	  height:350px;
+    margin:20px 50px;
+  }
+  .heap_map
+  {
+    width:600px;
+	  height:600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .text_img1
+  {
+    width:400px;
+	  height:500px;
+    margin:20px 50px;
+  }
+  .boxplot
+  {
+    width:90%;
+	  height:1500px;
+  }
+
+  .right_text
+  {
+    float:left;
+    margin:80px 0 0 5px;
+    width:850px;
+
+  }
+  .center_text
+  {
+    margin:20px 10px 40px 30px;
+    width:97%;
+  }
+
+  .right_image
+  {
+    float:left;
+    margin:0px 0px 5px 30px;
+  }
+  .center_image
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .left_text
+  {
+    float:left;
+    width:870px;
+    margin:80px 20px 5px;
+  }
+
+ p
+  {
+    text-align: justify;
+    font-size:20px;
+  }
+  .container2
+  {
+    border-style: solid;
+    border-width: thin;
+    border-color: #747474;
+    border-radius: 10px;
+    box-shadow: 5px 10px #888888;
+    float:left;
+    width:98%;
+    margin:10px;
+  }
